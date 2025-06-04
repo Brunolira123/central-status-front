@@ -1,0 +1,76 @@
+.dialog-container {
+  background: linear-gradient(135deg, #ff9800, #ff5722); /* Fundo laranja degradê */
+  padding: 2.5rem;
+  border-radius: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeInScale 0.3s ease-in-out;
+  color: #fff; /* Texto branco para contraste */
+  font-family: 'Orbitron', sans-serif;
+  max-width: 500px; /* Limite máximo */
+  box-sizing: border-box;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.icon-wrapper {
+  background: rgba(255, 255, 255, 0.2); /* Transparente branco, pra destacar */
+  border-radius: 100%;
+  padding: 1.5rem;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.alert-icon {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.dialog-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.dialog-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.dialog-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+}
+
+
+
+button {
+  display: inline-flex; /* Garante alinhamento horizontal do texto e ícone */
+  align-items: center; /* Alinha verticalmente */
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  white-space: nowrap; /* Mantém tudo numa linha só */
+  box-sizing: border-box; /* Inclui padding na largura total */
+    min-width: auto; /* Reseta caso tenha min-width forçado */
+  width: auto; /* Reseta caso tenha width forçado */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

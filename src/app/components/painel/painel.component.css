@@ -1,0 +1,136 @@
+/* Container com imagem de fundo responsiva e overlay */
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay para escurecer a imagem */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Caixa do painel */
+.painel-box {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 165, 0, 0.95); /* laranja com transparência */
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.painel-box:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  transform: translateY(-4px);
+}
+
+/* ===== TOOLBAR ===== */
+mat-toolbar {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: start;
+  letter-spacing: 2px;
+  background-color: #222 !important;
+  color: linear-gradient(135deg, #ff9800, #ff5722);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;           /* ADICIONE */
+  align-items: center;     /* ADICIONE */
+  position: relative;      /* ADICIONE */
+}
+/* ===== LISTA DE FILIAIS ===== */
+.filiais-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===== CARD DA FILIAL ===== */
+.filial-bloco {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.filial-bloco:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.filial-nome {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* ===== LISTA DE LOJAS ===== */
+.lojas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .lojas-list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .lojas-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+/* ===== Footer ===== */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0; /* Reduz a altura */
+  background-color: rgba(0, 0, 0, 0.3); /* Mais claro */
+  color: #eee; /* Um pouco mais claro também */
+  font-size: 0.85rem; /* Um pouco menor */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2); /* Sombra mais leve */
+  z-index: 10;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.75rem;
+    padding: 0.4rem 0;
+  }
+}
+
+.titulo {
+  text-align: center;
+  width: 100%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

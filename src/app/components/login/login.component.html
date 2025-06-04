@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="login-box">
+    <h2>LOGIN</h2>
+
+    <!-- Mensagem de erro global -->
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+
+    <form #loginForm="ngForm" (ngSubmit)="login()" novalidate>
+      <div>
+        <label for="username">Usuário</label>
+        <input id="username" 
+               aria-label="Usuário"
+               [(ngModel)]="username" 
+               name="username" 
+               required 
+               #usernameField="ngModel" />
+        <div *ngIf="usernameField.invalid && usernameField.touched" class="error">
+          Usuário obrigatório.
+        </div>
+      </div>
+
+      <div>
+        <label for="password">Senha</label>
+        <input id="password" 
+               aria-label="Senha"
+               type="password" 
+               [(ngModel)]="password" 
+               name="password" 
+               required 
+               minlength="4"
+               #passwordField="ngModel" />
+        <div *ngIf="passwordField.invalid && passwordField.touched" class="error">
+          Senha obrigatória (mínimo 4 caracteres).
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2025 VR Interior Paulista. Todos os direitos reservados.</p>
+</footer>

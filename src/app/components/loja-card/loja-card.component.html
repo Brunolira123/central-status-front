@@ -1,0 +1,18 @@
+<mat-card class="loja-card mat-elevation-z2">
+  <mat-card-content>
+    <div class="loja-header">
+      <strong>{{ loja.nome }}</strong>
+    </div>
+    <div class="loja-status">
+      Consistência:
+      <span class="status" [ngClass]="loja.consistencia ? 'ok' : 'fail'">
+        {{ loja.consistencia ? '✔️' : '❌' }}
+      </span>
+      
+      Encerramento:
+      <span class="status" [ngClass]="loja.encerramento ? 'ok' : 'fail'">
+        {{ loja.encerramento ? '✔️' : '❌' }}
+      </span>
+    </div>
+  </mat-card-content>
+</mat-card>
