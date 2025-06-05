@@ -1,27 +1,45 @@
-# FrontCentralStatus
+# VISÃO GERAL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+# Sistema de Monitoramento - Checklist
+Este repositório contém os componentes frontend e backend de uma aplicação robusta projetada para monitorar as consistências e os encerramentos diários de diversas lojas e suas respectivas filiais. O objetivo principal é fornecer uma visão clara e em tempo real do status operacional, garantindo a integridade dos dados e a conclusão bem-sucedida dos processos de encerramento em toda a rede de estabelecimentos.
 
-## Development server
+A aplicação é dividida em duas partes principais: um frontend interativo desenvolvido em Angular, que oferece uma interface de usuário intuitiva para visualização e acompanhamento, e um backend performático em Java, responsável pela coleta, processamento e disponibilização dos dados através de uma API RESTful.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✔️ Tecnologias
+- Angular (frontend)
+- Java + Spring Boot (backend)
+- PostgreSQL (banco)
+- Git, Node.js, Maven
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ✔️ Requisitos
+- Node.js >= 18
+- JDK >= 17
+- PostgreSQL >= 14
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ✔️ Backend
+- Configurar `application.properties`
+- Rodar:
 
-## Running unit tests
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+## ✔️ Frontend
+```bash
+npm install
+ng serve
+```
+- Acessar: http://localhost:4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ✔️ Funcionalidades
+- Monitorar status de consistências/encerramentos
 
-## Running end-to-end tests
+## ✔️ Build Produção
+- Frontend: `ng build`
+- Backend: `mvn package`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
