@@ -13,7 +13,7 @@ export class ErrorInterceptor {
         if (error.status === 0) {
           alert('Erro de rede ou CORS!');
         } else {
-          alert(`Erro ${error.status}: ${error.statusText}`);
+          //alert(`Erro ${error.status}: ${error.statusText}`);
         }
 
         return throwError(() => error);
